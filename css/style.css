@@ -1,0 +1,49 @@
+*
+{
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+body
+{
+    padding: 0;
+    margin: 0;
+    /* scroll-snap-type: y mandatory; */
+    /* overflow: hidden; */
+
+}
+html
+{
+    scroll-behavior:smooth; 
+    scroll-snap-type: y proximity;
+    /* scroll-behavior: smooth; */
+    transition: 2s ease;
+    /* scroll-snap-align: center; */
+}
+
+.scroll_section
+{
+    scroll-snap-align: start;
+    transition: 2s ease;
+}
+
+::-webkit-scrollbar
+{
+    width: 3px;
+    scrollbar-3dlight-color: #711ce4;
+}
+::-webkit-scrollbar-thumb
+{
+    background-image: linear-gradient( to top, #711ce4,#ae75fd);
+    scrollbar-3dlight-color: #711ce4;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    transition: 1s;
+    background-position: bottom;
+}
+
+
+
+

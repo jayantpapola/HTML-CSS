@@ -1,0 +1,527 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+.Contact_me
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    /* transform: translateZ(-7000px); */
+    /* animation: perspective 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; */
+}
+/* @keyframes perspective {
+    100%{transform: translateZ(0px) ;}
+} */
+.avatar_border
+{
+    height: 280px;
+    width: 280px;
+    border-radius:50% ;
+    background-color: #711ce4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+     0 0 50px black,
+    0 0 10px black inset;
+    animation:move 2s ease infinite;
+}
+.avatar_border::before
+{
+    content: "";
+    position: absolute;
+    height: 265px;
+    width: 265px;
+    border-radius: 50%;
+    box-shadow:  0 0 0 4px #ffffff79;
+    filter: blur(3px);
+    z-index: 3;
+}
+.avatar
+{
+    height: 250px;
+    width: 250px;
+    background-color: #29104b;
+    background-image: url("../img/10%OP-Logo.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.466) inset,
+    0 0 80px rgba(0, 0, 0, 0.466) inset,
+    0 0 10px black;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.avatar::before
+{
+    content: "";
+    position: absolute;
+    height: 248px;
+    width: 248px;
+    border-radius: 50%;
+    box-shadow:  0 0 40px rgba(0, 0, 0, 0.466) inset;
+    filter: blur(15px);
+    
+    z-index: 2; 
+}
+.khuchAur
+{
+    position: absolute;
+}
+.tomark img
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: mark 2.5s ease-in-out forwards;
+}
+@keyframes mark {
+    0%{ height: 0; width: 0;}
+    20%{height: 100px;width: 100px;}
+    50%{height: 100px;width: 100px;transform: rotate(0);}
+    60%{height: 100px;width: 100px;transform: rotate(2deg);}
+    70%{height: 100px;width: 100px;transform: rotate(-2deg);}
+    90%{height: 100px;width: 100px;}
+    100%{height: 0; width: 0;}
+}
+
+#svg
+{
+    height: 200px;
+    width: 200px;
+    transform: translateY(200px);
+    z-index: 1;
+}
+.animate
+{
+    animation: fun 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+   
+}
+@keyframes fun {
+    0%{transform: translateY(200px);}
+    40%{transform: translateY(150px);} 
+    60%{transform: translateY(150px);}
+    80%{transform: translateY(150px);}
+    100%{transform: translateY(40px);}
+}
+#head
+{
+    transform-origin: bottom;
+    transform: rotateZ(1deg);
+    animation: wobble 1s  3s  infinite ;
+}
+@keyframes wobble {
+    50%{transform: rotateZ(-1deg);}
+}
+
+.contact_btn
+{
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    background-color: #333;
+    box-shadow: 0 0 0 5px #711ce4,
+    0 0 10px black inset,
+    0 0 40px black;
+    margin-top: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.contact_btn:hover
+{
+    transition: .2s;
+    background-color: #711ce4;
+}
+.contact_btn::before
+{
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 152px;
+    box-shadow: 0 0 0 1px #a765fd;
+    filter: blur(2px);
+    border-radius: 10px;
+    
+}
+.floating_icons
+{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #333;
+}
+.bg_icons
+{
+    position: absolute;
+    color: rgb(65, 65, 65);
+}
+
+.icon_1
+{
+    font-size: 100px;
+    transform: translate(-400px,-300px) rotate(-30deg);
+    animation: icon_1 3s ease infinite;
+}
+@keyframes icon_1 {
+    50%{transform: translate(-400px,-305px) rotate(-30deg);}
+}
+.icon_2
+{
+    font-size: 50px;
+    transform: rotate(30deg) translate(-200px, 100px);
+    animation: icon_2 3s ease infinite;
+}
+@keyframes icon_2{
+    50%{transform: rotate(30deg) translate(-200px, 105px);}
+}
+.icon_3
+{
+    font-size: 80px;
+    transform: rotate(10deg) translate(-500px, -0px);
+    animation: icon_3 4s ease infinite;
+}
+@keyframes icon_3{
+    50%{transform: rotate(10deg) translate(-500px, -5px);}
+}
+.icon_4
+{
+    font-size: 80px;
+    transform: rotate(10deg) translate(500px, 100px);
+    animation: icon_4 2s ease infinite;
+}
+@keyframes icon_4{
+    50%{transform: rotate(10deg) translate(500px, 95px);}
+}
+.icon_5
+{
+    font-size: 40px;
+    transform: rotate(-10deg) translate(400px, -50px);
+    animation: icon_5 4s ease infinite;
+}
+@keyframes icon_5{
+    50%{transform: rotate(-10deg) translate(400px, -55px);}
+}
+.icon_6
+{
+    font-size: 60px;
+    transform: rotate(10deg) translate(400px, -400px);
+    animation: icon_6 3s ease infinite;
+}
+@keyframes icon_6{
+    50%{transform: rotate(10deg) translate(400px, -395px);}
+}
+.icon_7
+{
+    font-size: 40px;
+    transform: rotate(10deg) translate(200px, 100px);  
+    animation: icon_7 3s ease infinite; 
+}
+@keyframes icon_7{
+    50%{transform: rotate(10deg) translate(200px, 105px);  }
+}
+.icon_8
+{
+    font-size: 150px;
+    transform: translate(150px,-300px) rotate(10deg);
+    animation: icon_8 4s ease infinite; 
+}
+@keyframes icon_8{
+    50%{transform: translate(150px,-295px) rotate(10deg);  }
+}
+.icon_9
+{
+    font-size: 100px;
+    transform: translate(-250px,200px) rotate(-2deg);
+}.icon_10
+{
+    font-size: 70px;
+    transform: translate(-450px,100px);
+}
+.icon_11
+{
+    font-size: 60px;
+    transform: translate(-50px,300px) rotate(15deg);
+}
+.icon_12
+{
+    font-size: 60px;
+    transform: translate(-550px,300px) rotate(-10deg);
+}
+.icon_13
+{
+    font-size: 50px;
+    transform: translate(-130px,-250px) rotate(-8deg);
+}
+.icon_14
+{
+    font-size: 30px;
+    transform: translate(250px,300px);
+}
+
+
+/* #hello
+{
+    
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    background: white;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  60px;
+    transform: translate(150px,-50px);
+    font-family: Arial, Helvetica, sans-serif;
+    animation: name 1s ease-in-out forwards;
+}
+@keyframes name {
+    0%{height: 0px;width: 0px; font-size: 0;}
+    50%{height: 60px;width: 60px;border-radius: 60px;font-size: 0;}
+} */
+#hello
+{
+    
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    background: white;
+    font-size: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  60px;
+    transform: translate(50px,-50px);
+    font-family: Arial, Helvetica, sans-serif;
+    animation:  300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    transform-origin: left;
+}
+@keyframes name {
+    0%{height: 0px;width: 0px; font-size: 0;}
+    1%{height: 60px;width: 60px;border-radius: 60px;font-size: 0;}
+    100%{transform-origin: left;height: 60px;width: 300px;border-radius: 60px;
+        transform: translate(200px,-50px);font-size: medium;}
+}
+#How
+{
+    
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    background: white;
+    z-index: 99;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  40px;
+    transform: translate(-80px,-50px);
+    font-family: Arial, Helvetica, sans-serif;
+    animation:  500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards;
+}
+@keyframes how {
+    0%{height: 0;width: 0;}
+    1%{height: 60px;width: 60px;}
+    100%{height: 60px;width: 230px;transform: translate(-160px,-50px);font-size: medium;}
+}
+
+#who_name
+{
+    
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    background: white;
+    font-size: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  40px;
+    transform: translate(-80px,-50px);
+    font-family: Arial, Helvetica, sans-serif;
+    animation:  200ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes your_name {
+    0%{height: 0px;width: 0px; font-size: 0;}
+    1%{height: 60px;width: 60px;font-size: 0;}
+    100%{height: 60px;width: 150px;transform: translate(-140px,-50px);font-size: medium;}
+}
+#client_name
+{
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    background: white;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  60px;
+    transform: translate(0px,140px);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+.input_name
+{
+    height: 60px;
+    width: 160px;
+    border: none;
+    outline: none;
+}
+
+#Xenifer_contact
+{
+    box-shadow: 2px 0 5px rgba(51, 51, 51, 0.2);
+    cursor: pointer;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    font-weight: bold;
+    border-radius: 60px;
+    background-image: linear-gradient(to right, white,rgb(204, 70, 171), #7d1d91,#731ce4);
+    background-size: 2000px;
+    background-position: left;
+    z-index: 999;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translate(-80px,130px);
+    transition: 1s;
+    animation: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1500ms forwards;
+}
+@keyframes Xenifer_contact {
+    0%{height: 0; width: 0;font-size: 0;}
+    1%{height: 60px;width: 60px;font-size: 0;}
+    100%{height: 60px;width: 150px;font-size: medium;}
+}
+#Xenifer_contact:hover
+{
+    background-position: right;
+    color: white;
+}
+.social_media_links
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    height:  0px;
+    width: 0px;
+    font-size: 0;
+    z-index: 99;
+    background-color: white;
+    border-radius: 60px;
+    padding-left: 50px;
+    transform: translate(-80px,130px);
+    animation:  500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes links {
+    0%{height: 0;width: 0;font-size: 0;}
+    1%{height: 60px;width: 60px;font-size: 0;}
+    100%{height: 60px;width: 220px;transform: translate(40px,130px);
+        font-size: medium;}
+}
+.social_media_links a
+{
+    text-decoration: none;
+    color: black;
+}
+.social_media_links a :hover
+{
+    color: #711ce4;
+}
+#Graphic_btn
+{
+    box-shadow: -2px 0 5px rgba(51, 51, 51, 0.2);
+    cursor: pointer;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    font-weight: bold;
+    border-radius: 60px;
+    background-image: linear-gradient(to right, white,rgb(204, 70, 171), #7d1d91,#731ce4);
+    background-size: 3000px;
+    background-position: left;
+    z-index: 999;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translate(150px,130px);
+    transition: 1s;
+    animation:  500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1500ms forwards;
+}
+@keyframes Graphic_btn {
+    0%{height: 0; width: 0;font-size: 0;}
+    1%{height: 60px;width: 60px;font-size: 0;}
+    100%{height: 60px;width: 280px;font-size: medium;}
+}
+#Graphic_btn:hover
+{
+    background-position: right;
+    color: white;
+}
+.behance_link
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    height:  0px;
+    width: 0px;
+    font-size: 0;
+    z-index: 99;
+    background-color: white;
+    border-radius: 60px;
+    padding-right: 30px;
+    transform: translate(50px,130px);
+    animation:  500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes behance_link {
+    0%{height: 0;width: 0;font-size: 0;}
+    1%{height: 60px;width: 60px;font-size: 0;}
+    100%{height: 60px;width: 120px;transform: translate(0px,130px);
+        font-size: medium;}
+}
+.behance_link a
+{
+    text-decoration: none;
+    color: black;
+}
+.behance_link a :hover
+{
+    color: #711ce4;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 20px;
+}

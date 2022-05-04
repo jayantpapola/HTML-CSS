@@ -1,0 +1,222 @@
+.MyProjects
+{
+    height: 1800px;
+    width: 100%;
+    /* background-color: #333; */
+    /* background-image: linear-gradient(to top , #333,30%, white); */
+    /* background-image: url("../img/Test_bg_2.png"); */
+    background-size: contain;
+    overflow: hidden;
+    perspective: 2000px;
+
+}
+.MyProjects_heading
+{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+    /* color: white; */
+
+}
+.MyProjects_heading h1
+{
+    display: flex;
+    font-size: 80px;
+}
+#P
+{
+    height: 100px;width: 100px;
+    background-color: #d9475c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.P{
+    animation: P 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes P {
+    0%{transform: translate(-250px,0) rotate(-320deg);}
+    
+}
+.project_1
+{
+    /* background-image: linear-gradient(to top right, rgb(65, 65, 65),70%, rgb(168, 168, 168)); */
+    /* border: #711ce4 solid 2px; */
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(-200px);
+}
+.monitor
+{
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    /* background-color: beige; */
+    perspective: 2000px;
+    /* perspective-origin: center; */
+    overflow: hidden;
+    transform: translateX(-250px);
+}
+#monitor
+{
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    object-fit: contain;
+}
+#monitor_frame
+{
+    z-index: 1;
+    width: 1366px;
+    height: 770px;
+    transform-style: preserve-3d;
+    transform: translateZ(-1649px) translate(-282px,-160px);
+}
+.mobile
+{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    /* background-color: beige; */
+    perspective: 2000px;
+    /* perspective-origin: center; */
+    overflow: hidden;
+    transform: translate(200px,100px);
+}
+#mobile
+{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    object-fit: contain;
+}
+#mobile_frame
+{
+    z-index: 1;
+    width: 454px;
+    height: 810px;
+    transform-style: preserve-3d;
+    transform: translateZ(-3499px) translate(-76px,-184px);
+}
+.ipad
+{
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    /* background-color: beige; */
+    perspective: 2000px;
+    /* perspective-origin: center; */
+    overflow: hidden;
+    transform: translate(400px,40px) ;
+}
+#ipad
+{
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    object-fit: contain;
+    transform: rotateY(180deg);
+}
+#ipad_frame
+{
+    z-index: 1;
+    width: 767px;
+    height: 1025px;
+    transform-style: preserve-3d;
+    transform: translateZ(-3599px) translate(-210px,-262px);
+}
+.about_project_1
+{
+    /* border: #711ce4 solid 2px; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about_project_1 a 
+{
+    text-decoration: none;
+    color: white;
+}
+.about_project_1 a:hover
+{
+    text-decoration: none;
+    color: white;
+}
+.about_project_1 div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 120px;
+    background-color: #d9475c;
+    color: white;
+    
+}
+.about_project_1 div:hover
+{
+    background-color: #e25c70;
+}
+
+#second_proj
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 120px;
+    background-color: #711ce4;
+    color: white;
+    transform: translateY(350px);
+}
+.project_2 a
+{
+    text-decoration: none;
+}
+.project_2
+{
+    /* background-image: linear-gradient(to top right, rgb(65, 65, 65),70%, rgb(168, 168, 168)); */
+    margin-top: 200px;
+    height: 600px;
+    width: 100%;
+    /* border: #711ce4 solid 2px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(100px) translateY(-110px);
+}
+.monitor_2
+{
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    /* background-color: beige; */
+    perspective: 2000px;
+    /* perspective-origin: center; */
+    overflow: hidden;
+    /* transform: translateX(450px); */
+}
+#monitor_2
+{
+    position: absolute;
+    height: 600px;
+    width: 800px;
+    object-fit: contain;
+}
+#monitor_frame_2
+{
+    z-index: 1;
+    width: 1366px;
+    height: 770px;
+    transform-style: preserve-3d;
+    transform: translateZ(-1649px) translate(-282px,-160px);
+}

@@ -1,0 +1,167 @@
+.header
+{
+    height: 100vh;
+    width: 100%;
+    color: black;
+}
+.intro
+{
+    
+    height: 100vh;
+    width: 100%;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: color 500ms ease-in-out 4s  forwards;
+}
+@keyframes color 
+{
+    to
+    {color: white;
+    }    
+}.intro::before
+{
+    content: "";
+    background-image:  url("../img/10%OP-Logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: finalbg 400ms ease-in-out 4s  forwards,
+                finalbgmove 2s ease-in-out 4s  infinite;
+    z-index: -1;
+}
+@keyframes finalbg
+{
+    to
+    {top:0 ;
+    
+    }    
+}@keyframes finalbgmove
+{
+    50%
+    {top:5%
+    }    
+    100%{
+        top:0;
+    }
+}
+.intro::after
+{
+    content: "";
+    /* background-image:  linear-gradient(to right , #2e4eb6, #5980ff); */
+    background-image: linear-gradient( to top, #711ce4,#ae75fd);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: final 400ms ease-in-out 4s  forwards;
+    z-index: -2;
+}
+@keyframes final 
+{
+    to
+    {top:0 ;
+    }    
+}
+
+.intro p 
+{
+    font-size: 20px;
+}
+#myName
+{
+    font-size: clamp(1rem,3vw + 1rem, 4rem);
+    position: relative;
+    font-weight: lighter;
+}
+#myName::after,#myName::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#myName::before
+{
+    animation: typewriter 2s steps(25) 1s  forwards;
+    background-color: white;
+
+}@keyframes typewriter {
+    100%
+    {
+        left: 100%;
+    }
+    
+}
+#myName::after
+{
+    animation: typewriterBar 2s steps(25) 1s forwards,
+                blink  500ms steps(25) 3s  infinite,
+                Barcolor 500ms ease-in-out 4s  forwards;
+    background-color: black;
+    width: 3px;
+    
+}
+@keyframes Barcolor {
+    100%
+    {
+        background-color: white;
+    }
+}
+@keyframes typewriterBar {
+    100%
+    {
+        left: 100%;
+    }
+}
+@keyframes blink
+{
+    50%{opacity: 0};
+    100%{background-color: black;}
+}
+#start
+{
+    opacity: 0;
+    animation: start 1s ease 5s  forwards;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(200px);
+}
+#start a
+{
+    text-decoration: none;
+    color: white;
+}
+#start:hover
+{
+ font-size: 18px;
+}
+@keyframes start {
+
+    100%{opacity: 1;}
+    
+}
+#start::after
+{
+    font-size: 16px;
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    animation: blink2 1s ease 6s infinite ;
+}
+@keyframes blink2 {
+
+    50%{transform: translateY(5px);}
+    100%{}
+}
